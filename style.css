@@ -1,6 +1,11 @@
 /* ---------------- RESET ---------------- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; scroll-behavior: smooth; }
+html,body { 
+  background-color: black; /* or #000000 */
+  color: white; /* sets default text color to white for readability */
+  height: 100%; 
+  scroll-behavior: smooth; 
+}
 
 /* ---------------- THEME ---------------- */
 :root{
