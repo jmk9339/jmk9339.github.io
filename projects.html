@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Projects — Cybersecurity Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <div class="nav-links" role="menubar" aria-label="Top Navigation">
+      <a href="index.html" role="menuitem">Home</a>
+      <a href="projects.html" class="active" role="menuitem">Projects</a>
+      <a href="#footer" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="content-wrap">
+
+  <!-- HERO / PAGE TITLE -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="title">My Projects</h1>
+      <p class="lead">
+        A selection of cybersecurity and software projects I have worked on, ranging from web security 
+        write-ups to game development. Click on any project to see details.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECT LIST -->
+  <section class="projects" aria-labelledby="projects-list-title">
+    <div class="projects-inner">
+      <h2 id="projects-list-title" class="title" style="font-size:2rem;">All Projects</h2>
+
+      <div id="project-list-target"></div>
+
+      <a href="index.html" class="btn btn-primary" style="margin-top:20px;">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Footer / contact (always visible on page bottom) -->
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <h2>Jared Korwatch</h2>
+    <p><strong>Email:</strong> <a href="mailto:jmk9339@rit.edu">jmk9339@rit.edu</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/stillersight" target="_blank" rel="noopener">github.com/stillersight</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jared-korwatch" target="_blank" rel="noopener">linkedin.com/in/jared-korwatch</a></p>
+  </footer>
+
+</div>
+
+<script>
+  const projects = [
+    {
+      "title": "Roblox Game - \"Party Game\"",
+      "description": "Custom round-based multiplayer game with advanced movement mechanics, interactive items, and a placement/score system inspired by \"Ultimate Chicken Horse\". Features clean code through Object Oriented Programming principles."
+      // "image": "images/project1.png",
+      // "alt": "Ultimate Chicken Horse Project Screenshot",
+      // "link": "party-game.html"
+    },
+    {
+      "title": "Front-end Web Development built in React.js",
+      "description": "Created a custom scoring webpage for a cybersecurity red vs. blue team competition, built in React.js"
+      // "link": "scoring-web.html"
+    },
+    {
+      "title": "Red Team SSH Persistence Tool",
+      "description": "Created and deployed a red team tool for a cybersecurity competition. Built as a custom Linux service that scans user SSH keys and inserts a custom SSH key."
+    }
+  ];
+
+  const projectContainer = document.getElementById('project-list-target');
+
+  projectContainer.innerHTML = projects.map(project => {
+    // 1. Handle Optional Image
+    const imageHtml = (project.image && project.image.trim() !== "") 
+      ? `<img src="${project.image}" alt="${project.alt || ''}">` 
+      : "";
+
+    // 2. Determine Wrapper Tag and Arrow
+    const isClickable = !!project.link;
+    const tagName = isClickable ? 'a' : 'div';
+    const tagAttrs = isClickable 
+      ? `href="${project.link}" class="project-card clickable" style="text-decoration: none; color: inherit;"` 
+      : `class="project-card"`;
+
+    // 3. Only show the arrow if it's clickable
+    const arrowHtml = isClickable ? `<div class="project-arrow">→</div>` : "";
+
+    return `
+      <${tagName} ${tagAttrs}>
+        ${imageHtml}
+        <div class="project-info">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+        </div>
+        ${arrowHtml}
+      </${tagName}>
+    `;
+  }).join('');
+</script>
+</body>
+</html>
