@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Red Team SSH Tool | Jared Korwatch</title>
+<title>Red Team Persistence Tool | Jared Korwatch</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -28,13 +28,12 @@
   <!-- HERO -->
   <section class="hero project-hero">
   <div class="hero-inner">
-    <h1 class="title">Project Name</h1>
+    <h1 class="title">Red Team Persistence Tool</h1>
     <p class="lead">
-      Brief Description
+      A custom SSH-based persistence tool for red team operations.
     </p>
   </div>
 </section>
-
 
   <!-- PROJECT DETAIL SECTION -->
   <section class="project-detail">
@@ -47,10 +46,54 @@
       <div class="project-detail-text">
         <h2>Project Background</h2>
         <p>
-          blah blah blah
+          The Chernobyl competition focused on pitting teams against each other in a traditional red vs blue team framework. 
+          There were three blue teams, each separately scored, creating a need for the red team to apply pressure on three fronts. 
+          I was one of nine members on the red team for this competition.
         </p>
+        <p>
+          I created a Systemd persistence tool for Linux-based machines by writing an Ansible playbook that deploys a payload, initializes my fake service, and adds my ssh key to the given list of users. 
+        </p>
+        <a href="https://github.com/jmk9339/"
+          class="btn btn-intext"
+          target="_blank"
+          rel="noopener">
+
+          <img src="../images/github_white.png" 
+                alt="GitHub icon" 
+                class="intext-icon">
+
+          <span>View on GitHub</span>
+        </a>
       </div>
 
+    </div>
+  </section>
+
+  <section class="project-detail">
+    <div class="project-detail-inner">
+
+      <div class="project-detail-text">
+        <h2>Issues & Conflict</h2>
+        <p>
+          As a team, we had not communicated enough both before and during the competition. 
+          The issue caused team members to lose access to hosts, heavy bias with numerous services going down for just one team, and one Windows box became unavailable for the remainder of the day. 
+          If we had planned for the competition in a more sophisticated manner, we could have better prepared each team member’s red team tool.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail">
+    <div class="project-detail-inner">
+
+      <div class="project-detail-text">
+        <h2>Lessons Learned</h2>
+        <p>
+          Our actions and tasks should have been better communicated amongst each other to help the team avoid overlap and reduce friction between members. 
+          It would have been best to inform the team of what I was working on, how I could help, or when I required help.
+          Learning and planning attack vectors ahead of the competition could have allowed our team to produce a more impartial competition as well. 
+        </p>
+      </div>
     </div>
   </section>
 
