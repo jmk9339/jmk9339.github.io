@@ -120,9 +120,10 @@ nav {
 
 @media (max-width: 768px) {
   .nav-inner {
-    flex-direction: column;
+    flex-direction: row;      /* horizontal layout */
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    padding: 0 1rem;
   }
 
   .nav-links {
@@ -130,9 +131,7 @@ nav {
     align-items: center;
     gap: 12px;
   }
-}
 
-@media (max-width: 768px) {
   .nav-toggle {
     display: block; /* show hamburger */
   }
