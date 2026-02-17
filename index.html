@@ -17,6 +17,10 @@
       <a href="index.html">Jared Korwatch</a>
     </div>
 
+    <button class="nav-toggle" aria-label="Open menu">
+      &#9776;
+    </button>
+
     <!-- RIGHT: Tabs -->
     <div class="nav-links" role="menubar">
       <a href="index.html" class="active" role="menuitem">Home</a>
@@ -173,6 +177,13 @@
 </footer>
 
 </div>
+<script>
+  const toggleButton = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
