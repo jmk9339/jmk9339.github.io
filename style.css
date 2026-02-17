@@ -312,7 +312,7 @@ p.lead{
 }
 
 .projects-inner {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -333,12 +333,23 @@ p.lead{
   position: relative;
 }
 
+@media (max-width: 600px) {
+  #project-list-target {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+  .project-card img {
+    width: 140px;
+    height: 100px;
+  }
+}
+
 #project-list-target {
-  display: flex;
-  flex-direction: column;
-  gap: 32px; /* spacing between project cards */
+  display: grid; /* use grid layout instead of flex column */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  gap: 32px; /* spacing between cards */
   width: 100%;
 }
+
 
 /* Add a hover effect to match your blog cards */
 a.project-card.clickable {
