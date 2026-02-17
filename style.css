@@ -37,7 +37,7 @@ body{
 }
 
 html {
-  /* background: linear-gradient(180deg,var(--bg-1),var(--bg-2)); */
+  background-color: rgb(0, 0, 0);
 }
 
 
@@ -219,6 +219,28 @@ p.lead{
   background: transparent;
   border: 1px solid rgba(255,255,255,0.06);
   color:var(--muted);
+}
+
+.btn-intext {
+  background-color: #141414;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  border: 1px solid #111;
+  transition: all 0.2s ease;
+}
+
+.btn-intext:hover {
+  background-color: #24292e;
+  border-color: #24292e;
+  transform: translateY(-2px);
+}
+
+.intext-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* float animation */
