@@ -11,11 +11,20 @@
 <!-- NAV -->
 <nav role="navigation" aria-label="Main">
   <div class="nav-inner">
-    <div class="nav-links" role="menubar" aria-label="Top Navigation">
-      <a href="index.html" role="menuitem">Home</a>
-      <a href="projects.html" class="active" role="menuitem">Projects</a>
+
+    <!-- LEFT: Your Name -->
+    <div class="nav-brand">
+      <a href="index.html">Jared Korwatch</a>
+    </div>
+
+    <!-- RIGHT: Tabs -->
+    <div class="nav-links" role="menubar">
+      <a href="index.html" class="active" role="menuitem">Home</a>
+      <a href="#about" role="menuitem">About</a>
+      <a href="projects.html" role="menuitem">Projects</a>
       <a href="#footer" role="menuitem">Contact</a>
     </div>
+
   </div>
 </nav>
 
@@ -46,11 +55,40 @@
 
   <!-- Footer / contact (always visible on page bottom) -->
   <footer id="footer" class="site-footer" role="contentinfo">
-    <h2>Jared Korwatch</h2>
-    <p><strong>Email:</strong> <a href="mailto:jmk9339@rit.edu">jmk9339@rit.edu</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/stillersight" target="_blank" rel="noopener">github.com/stillersight</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/jared-korwatch" target="_blank" rel="noopener">linkedin.com/in/jared-korwatch</a></p>
-  </footer>
+  <div class="footer-inner">
+
+    <h2 class="footer-name">Jared Korwatch</h2>
+    <p class="footer-tagline">Cybersecurity Student • New York</p>
+
+    <div class="contact-grid">
+      
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:jmk9339@rit.edu">jmk9339@rit.edu</a>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/stillersight" target="_blank" rel="noopener">
+          github.com/stillersight
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/jared-korwatch" target="_blank" rel="noopener">
+          linkedin.com/in/jared-korwatch
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Jared Korwatch. All rights reserved.
+    </div>
+
+  </div>
+</footer>
 
 </div>
 
@@ -58,9 +96,9 @@
   const projects = [
     {
       "title": "Roblox Game - \"Party Game\"",
-      "description": "Custom round-based multiplayer game with advanced movement mechanics, interactive items, and a placement/score system inspired by \"Ultimate Chicken Horse\". Features clean code through Object Oriented Programming principles."
-      // "image": "images/project1.png",
-      // "alt": "Ultimate Chicken Horse Project Screenshot",
+      "description": "Custom round-based multiplayer game with advanced movement mechanics, interactive items, and a placement/score system inspired by \"Ultimate Chicken Horse\". Features clean code through Object Oriented Programming principles.",
+      "image": "images/roblox_game_thumbnail.png",
+      "alt": "Party Game Project Screenshot",
       // "link": "party-game.html"
     },
     {
